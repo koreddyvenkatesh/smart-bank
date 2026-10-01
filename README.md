@@ -5,11 +5,11 @@ A robust, full-stack banking application designed to handle core financial opera
 ## 🚀 Key Features
 
 *   **Role-Based Access Control (RBAC):** Distinct dashboards and API endpoints tailored for Admins, Clerks, and Customers.
-*   **Secure Authentication:** Stateless session management utilizing JSON Web Tokens (JWT) and custom security filters for all incoming requests[cite: 1].
-*   **Account Management:** Customer onboarding, account creation, and structured KYC (Know Your Customer) review processes[cite: 1].
-*   **Secure Transactions:** Internal fund transfers protected by OTP (One-Time Password) verification to ensure transaction integrity[cite: 1].
-*   **Loan Processing:** End-to-end loan application workflows and status tracking mechanisms[cite: 1].
-*   **Global Error Handling:** Centralized exception handling to provide standardized, predictable API responses to the client-side application[cite: 1].
+*   **Secure Authentication:** Stateless session management utilizing JSON Web Tokens (JWT) and custom security filters for all incoming requests.
+*   **Account Management:** Customer onboarding, account creation, and structured KYC (Know Your Customer) review processes.
+*   **Secure Transactions:** Internal fund transfers protected by OTP (One-Time Password) verification to ensure transaction integrity.
+*   **Loan Processing:** End-to-end loan application workflows and status tracking mechanisms.
+*   **Global Error Handling:** Centralized exception handling to provide standardized, predictable API responses to the client-side application.
 
 ## 🛠️ Tech Stack
 
@@ -18,14 +18,14 @@ A robust, full-stack banking application designed to handle core financial opera
 *   **Framework:** Spring Boot, Spring Security, Spring Data JPA
 *   **Database:** MySQL with Hibernate ORM
 *   **Authentication:** JWT (JSON Web Tokens)
-*   **Build Tool:** Maven[cite: 1]
+*   **Build Tool:** Maven
 
 **Frontend Interface**
 *   **Core:** HTML5, CSS3, Vanilla JavaScript
-*   **Integration:** Fetch API for asynchronous REST communication[cite: 2]
+*   **Integration:** Fetch API for asynchronous REST communication
 
 **Testing & Tools**
-*   **API Testing:** Postman[cite: 1]
+*   **API Testing:** Postman
 *   **Version Control:** Git & GitHub
 
 ## 📂 Project Structure
