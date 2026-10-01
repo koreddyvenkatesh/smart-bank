@@ -40,7 +40,7 @@ Smart-Bank-Management/
     ├── css/style.css           # UI Styling
     ├── js/app.js               # Client-side routing and API integration
     └── index.html              # Main application entry point
-
+```
 ## ⚙️ Local Setup & Installation
 
 *   **Prerequisites**
