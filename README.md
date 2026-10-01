@@ -40,3 +40,10 @@ Smart-Bank-Management/
     ├── css/style.css           # UI Styling
     ├── js/app.js               # Client-side routing and API integration
     └── index.html              # Main application entry point
+
+## ⚙️ Local Setup & Installation
+
+*   **Prerequisites**
+*   Java Development Kit (JDK) 17 or higher
+*   MySQL Server installed and running
+*   Maven installed
