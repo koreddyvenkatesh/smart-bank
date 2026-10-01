@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bank</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">SMART BANK</div>
+
+    <div id="navUser" class="nav-user hidden">
+        <span id="userName"></span>
+        <span id="userRole"></span>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</header>
+
+
+<main>
+
+   
+
+    <section id="authSection" class="auth-container">
+
+        <!-- LOGIN -->
+
+        <div id="loginSection" class="auth-card">
+
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Sign in to your bank account</p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label>Email / Account Number</label>
+                    <input
+                        type="text"
+                        id="loginIdentifier"
+                        placeholder="Enter email or account number"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Sign In
+                </button>
+
+            </form>
+
+            <button
+                type="button"
+                id="forgotPasswordBtn"
+                class="link-btn">
+                Forgot Password?
+            </button>
+
+            <div class="separator">
+                <span>OR</span>
+            </div>
+
+            <div class="signup-link">
+                <span>Don't have an account?</span>
+                <button
+                    type="button"
+                    id="showSignupBtn"
+                    class="link-btn">
+                    Sign Up
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- SIGN UP -->
+
+        <div id="signupSection" class="auth-card hidden">
+
+            <h1>Create Account</h1>
+            <p class="subtitle">
+                Submit your details for bank account creation
+            </p>
+
+            <form id="signupForm">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input
+                        type="text"
+                        id="signupFullName"
+                        placeholder="Enter full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Enter email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input
+                        type="tel"
+                        id="signupMobile"
+                        placeholder="Enter mobile number"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Account Type</label>
+
+                    <select id="signupAccountType" required>
+                        <option value="">Select account type</option>
+                        <option value="SAVINGS">Savings</option>
+                        <option value="CURRENT">Current</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="login-link">
+                <span>Already have an account?</span>
+
+                <button
+                    type="button"
+                    id="showLoginBtn"
+                    class="link-btn">
+                    Sign In
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- FORGOT PASSWORD -->
+
+        <div id="forgotSection" class="auth-card hidden">
+
+            <h1>Reset Password</h1>
+            <p class="subtitle">
+                Verify your registered email using OTP
+            </p>
+
+            <form id="sendOtpForm">
+
+                <div class="form-group">
+                    <label>Registered Email</label>
+
+                    <input
+                        type="email"
+                        id="forgotIdentifier"
+                        placeholder="Enter registered email"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Send OTP
+                </button>
+
+            </form>
+
+            <div id="otpSection" class="hidden">
+
+                <form id="verifyOtpForm">
+
+                    <div class="form-group">
+                        <label>OTP</label>
+
+                        <input
+                            type="text"
+                            id="otpCode"
+                            placeholder="Enter OTP"
+                            maxlength="6"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Verify OTP
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div id="resetPasswordSection" class="hidden">
+
+                <form id="resetPasswordForm">
+
+                    <!-- <div class="form-group">
+                        <label>Temporary Password</label>
+
+                        <input
+                            type="password"
+                            id="tempPassword"
+                            required
+                        >
+                    </div> -->
+
+                    <div class="form-group">
+                        <label>New Password</label>
+
+                        <input
+                            type="password"
+                            id="newPassword"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Reset Password
+                    </button>
+
+                </form>
+
+            </div>
+
+            <button
+                type="button"
+                id="backToLoginBtn"
+                class="link-btn">
+                Back to Sign In
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <section id="dashboardSection" class="dashboard hidden">
+
+
+        <!-- CUSTOMER DASHBOARD -->
+
+        <div id="customerDashboard" class="dashboard-content hidden">
+
+            <div class="dashboard-header">
+                <h1>Customer Dashboard</h1>
+                <p>Manage your bank account</p>
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="card">
+
+                <h2>My Profile</h2>
+
+                <div id="customerProfile">
+                    Loading profile...
+                </div>
+
+            </div>
+
+
+            <!-- TRANSFER -->
+
+            <div class="card">
+
+                <h2>Transfer Money</h2>
+
+                <form id="transferForm">
+
+                    <div class="form-group">
+                        <label>From Account</label>
+
+                        <select id="transferFromAccount" required>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>To Account Number</label>
+
+                        <input
+                            type="text"
+                            id="transferToAccount"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount</label>
+
+                        <input
+                            type="number"
+                            id="transferAmount"
+                            min="1"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Transfer
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- LOAN -->
+
+            <div class="card">
+
+                <h2>Apply for Loan</h2>
+
+                <form id="loanForm">
+
+                    <div class="form-group">
+                        <label>Account</label>
+
+                        <select id="loanAccount" required>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Loan Type</label>
+
+                        <select id="loanType" required>
+                            <option value="">Select loan type</option>
+                            <option value="PERSONAL">Personal Loan</option>
+                            <option value="HOME">Home Loan</option>
+                            <option value="EDUCATION">Education Loan</option>
+                            <option value="VEHICLE">Vehicle Loan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Amount</label>
+
+                        <input
+                            type="number"
+                            id="loanAmount"
+                            min="1"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tenure (Months)</label>
+
+                        <input
+                            type="number"
+                            id="loanTenure"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Apply for Loan
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLERK DASHBOARD -->
+
+        <div id="clerkDashboard" class="dashboard-content hidden">
+
+            <div class="dashboard-header">
+                <h1>Clerk Dashboard</h1>
+                <p>Register new customers</p>
+            </div>
+
+            <div class="card">
+
+                <h2>Customer Registration</h2>
+
+                <form id="clerkCustomerForm">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            id="clerkFullName"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            id="clerkEmail"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile</label>
+
+                        <input
+                            type="tel"
+                            id="clerkMobile"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Account Type</label>
+
+                        <select id="clerkAccountType" required>
+                            <option value="">Select account type</option>
+                            <option value="SAVINGS">Savings</option>
+                            <option value="CURRENT">Current</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="primary-btn">
+                        Register Customer
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMIN DASHBOARD -->
+
+        <div id="adminDashboard" class="dashboard-content hidden">
+
+            <div class="dashboard-header">
+                <h1>Admin Dashboard</h1>
+                <p>Manage customer and loan approvals</p>
+            </div>
+
+
+            <!-- PENDING CUSTOMERS -->
+
+            <div class="card">
+
+                <h2>Pending Customers</h2>
+
+                <div id="pendingCustomers">
+                    Loading...
+                </div>
+
+            </div>
+
+
+            <!-- PENDING LOANS -->
+
+            <div class="card">
+
+                <h2>Pending Loans</h2>
+
+                <div id="pendingLoans">
+                    Loading...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- TOAST -->
+
+<div id="toast" class="toast"></div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
